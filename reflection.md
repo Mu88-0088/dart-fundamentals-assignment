@@ -1,8 +1,7 @@
 # Dart Fundamentals Assignment - Reflection
 
-**Student Name:** [Your Name]
-**Student ID:** [Your ID]
-**Date:** [Submission Date]
+Name:MUSAB ASHIK
+ID:ATE/0319/15
 
 ## QR1: Most Challenging Concept
 
@@ -54,22 +53,4 @@ Multiple Function Approach:
 double add(double a, double b) => a + b;
 double subtract(double a, double b) => a - b;
 
-Advantages of multiple methods:
 
-Self-documenting code - The method name clearly states what it does
-
-Type safety - Each operation is explicitly defined
-
-Easier to test - Can test each operation independently
-
-Better IDE support - Autocomplete shows available operations
-
-Follows Single Responsibility Principle - Each method does one thing
-
-Advantages of single function:
-
-Less code duplication - Error handling and logging can be centralized
-
-Easier to add new operations - Just add a new case to the switch
-
-Dynamic operation selection - Useful when operation names come from user input
