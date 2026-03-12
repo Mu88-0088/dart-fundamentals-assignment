@@ -37,20 +37,6 @@ Future<WeatherData> fetchWeather(String cityName) async {
   }
 }
 
-QR4: Single Function vs Multiple Methods
-If a colleague asked about using one function instead of four separate methods, I would explain both approaches:
 
-Single Function Approach:
-double calculate(double a, double b, String operation) {
-  switch(operation) {
-    case 'add': return a + b;
-    case 'subtract': return a - b;
-    // etc.
-  }
-}
-
-Multiple Function Approach:
-double add(double a, double b) => a + b;
-double subtract(double a, double b) => a - b;
 
 
