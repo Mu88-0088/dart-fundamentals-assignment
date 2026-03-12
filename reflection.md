@@ -37,3 +37,39 @@ Future<WeatherData> fetchWeather(String cityName) async {
     throw Exception('Failed to load weather');
   }
 }
+
+QR4: Single Function vs Multiple Methods
+If a colleague asked about using one function instead of four separate methods, I would explain both approaches:
+
+Single Function Approach:
+double calculate(double a, double b, String operation) {
+  switch(operation) {
+    case 'add': return a + b;
+    case 'subtract': return a - b;
+    // etc.
+  }
+}
+
+Multiple Function Approach:
+double add(double a, double b) => a + b;
+double subtract(double a, double b) => a - b;
+
+Advantages of multiple methods:
+
+Self-documenting code - The method name clearly states what it does
+
+Type safety - Each operation is explicitly defined
+
+Easier to test - Can test each operation independently
+
+Better IDE support - Autocomplete shows available operations
+
+Follows Single Responsibility Principle - Each method does one thing
+
+Advantages of single function:
+
+Less code duplication - Error handling and logging can be centralized
+
+Easier to add new operations - Just add a new case to the switch
+
+Dynamic operation selection - Useful when operation names come from user input
