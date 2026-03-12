@@ -184,17 +184,15 @@ Answer: A List<int> is a type-safe list that can only contain integer values, wh
     because it provides type safety - the Dart compiler can catch type errors at compile time 
     rather than runtime. It also enables better IDE support with autocomplete and documentation, 
     and makes the code more self-documenting by clearly stating what type of data the list holds.
-    Additionally, typed lists have better performance since Dart doesn't need to perform type 
-    checking at runtime.
 
-
+    
 Question-2: In your findMax() function, why is it important to initialize your 'running maximum' 
     variable to the first element of the list rather than to 0 or to a very small number? 
     What could go wrong with the other approaches?
 
 Answer: Initializing to the first element is important because it guarantees that the initial value 
     is actually present in the list. If we initialize to 0 and the list contains all negative 
-    numbers (like [-5, -10, -3]), the function would incorrectly return 0 as the maximum, when 
+    numbers (like -5, -10, -3), the function would incorrectly return 0 as the maximum, when 
     the actual maximum is -3. Similarly, initializing to a very small number like -999999 could 
     work for most cases but might fail if the list contains even smaller numbers. Using the first 
     element ensures our initial value is always a valid number from the dataset we're analyzing.
@@ -209,6 +207,7 @@ Answer: Reusing existing functions is preferable because it reduces code duplica
     and less prone to bugs. If there's a bug in the sum calculation, we only need to fix it in one place. 
     It also makes the code more readable - calculateAverage's implementation clearly shows that an average is just the sum divided by count. 
     This modular approach follows the single responsibility principle where each function has one clear purpose.
+
 
 
 Question-4: Describe in plain English what the for-in loop syntax does in Dart. How is it different 
