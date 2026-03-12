@@ -1,11 +1,10 @@
 // Task 2: Async Calculator App
-// This program demonstrates OOP, exception handling, and async programming
-// Student Name: [Your Name]
-// Student ID: [Your ID]
+// Name: MUSAB ASHIK
+// ID: ATE/0319/15
 
 import 'dart:async';
 
-// Custom exception class for invalid operations (bonus challenge)
+// Custom exception class for invalid operations
 class InvalidOperationException implements Exception {
   final String message;
   InvalidOperationException(this.message);
@@ -15,16 +14,14 @@ class InvalidOperationException implements Exception {
 }
 
 class Calculator {
-  // Properties
   final String name;
   
-  // BONUS: History log of calculations
+  // History of calculations
   final List<String> _history = [];
   
-  // Constructor
   Calculator(this.name);
   
-  // Synchronous arithmetic methods
+  // Ahrithmetic methods
   double add(double a, double b) {
     double result = a + b;
     _addToHistory('add', a, b, result);
@@ -51,13 +48,13 @@ class Calculator {
     _addToHistory('divide', a, b, result);
     return result;
   }
+
   
-  // Private helper to add to history
   void _addToHistory(String operation, double a, double b, double result) {
     _history.add('$operation($a, $b) = $result');
   }
   
-  // BONUS: Print history
+  // Print history
   void printHistory() {
     print('\n--- Calculation History ---');
     if (_history.isEmpty) {
@@ -71,11 +68,11 @@ class Calculator {
   
   // Async method that simulates delayed computation
   Future<double> computeAsync(double a, double b, String operation) async {
-    const delay = Duration(milliseconds: 1500); // Named constant for clarity
+    const delay = Duration(milliseconds: 1500); 
     
     double result;
     
-    // Use switch statement to call appropriate synchronous method
+    // Switch statement to call appropriate synchronous method
     switch (operation) {
       case 'add':
         result = add(a, b);
@@ -90,12 +87,12 @@ class Calculator {
         result = divide(a, b);
         break;
       default:
-        // BONUS: Throw custom exception for invalid operations
+        // Throw custom exception for invalid operations
         throw InvalidOperationException('Unknown operation: "$operation". '
             'Valid operations: add, subtract, multiply, divide');
     }
     
-    // Simulate network delay
+    
     await Future.delayed(delay);
     return result;
   }
@@ -106,12 +103,12 @@ class Calculator {
       final result = await computeAsync(a, b, operation);
       print('$operation($a, $b) = $result');
     } catch (e) {
-      // User-friendly error message
+      // Error message
       print('Error performing $operation($a, $b): $e');
     }
   }
   
-  // BONUS: Chain operations across a list of values
+  // Chain operations across a list of values
   Future<double> computeChained(List<double> values, String operation) async {
     if (values.isEmpty) {
       throw ArgumentError('Cannot chain operations on empty list');
@@ -143,7 +140,7 @@ class Calculator {
   }
 }
 
-// BONUS: Parallel execution demonstration
+// Parallel execution demonstration
 Future<void> demonstrateParallelExecution(Calculator calc) async {
   print('\n--- Parallel Execution Demo ---');
   
@@ -158,7 +155,7 @@ Future<void> demonstrateParallelExecution(Calculator calc) async {
   print('Running 4 calculations in parallel (should take ~1.5 seconds total)...');
   final stopwatch = Stopwatch()..start();
   
-  // Wait for all futures to complete
+
   final results = await Future.wait(futures);
   
   stopwatch.stop();
@@ -179,7 +176,7 @@ void main() async {
   
   print('--- ${calc.name} ---\n');
   
-  // Test all operations with proper error handling
+  // Test all operations
   await calc.displayResult(10, 4, 'add');
   await calc.displayResult(10, 4, 'subtract');
   await calc.displayResult(10, 4, 'multiply');
@@ -194,11 +191,11 @@ void main() async {
   print('\n--- Testing Invalid Operation ---');
   await calc.displayResult(5, 3, 'power');
   
-  // BONUS: Print calculation history
+  // calculation history
   print('\n--- History Feature ---');
   calc.printHistory();
   
-  // BONUS: Chain operations
+  // Chain operations
   print('\n--- Chained Operations ---');
   try {
     final chainedResult = await calc.computeChained([10, 5, 2, 3], 'add');
@@ -207,7 +204,7 @@ void main() async {
     print('Error in chained operation: $e');
   }
   
-  // BONUS: Parallel execution demonstration
+  // Parallel execution demonstration
   await demonstrateParallelExecution(calc);
   
   print('\n' + '=' * 50);
