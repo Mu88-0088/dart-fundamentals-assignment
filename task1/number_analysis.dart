@@ -108,7 +108,7 @@ int calculateSumBuiltIn(List<int> numbers) {
 
 void main() {
   // Declare and initialize the list with at least 8 integers (including negatives)
-  final List<int> numbers = [34, -7, 89, 12, -45, 67, 3, 100, -2, 55];
+  final List<int> numbers = [88, -12, 91, 108, -3, 71, 33, 55, 20, -11];
   
   print('=' * 50);
   print('NUMBER ANALYSIS APP');
