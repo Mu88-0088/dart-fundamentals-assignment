@@ -1,13 +1,8 @@
 # dart-fundamentals-assignment
 
-**Student Name:** [Your Name]
-**Student ID:** [Your ID]
 
 ## Assignment Overview
 This repository contains my solutions for the Dart Fundamentals programming assignment. The project demonstrates proficiency in core Dart concepts including lists, functions, OOP, exception handling, and asynchronous programming.
-
-
-
 
 
 
@@ -47,6 +42,3 @@ An object-oriented calculator with asynchronous capabilities:
 - Task 2 demonstrates error handling with division by zero
 - All functions include null safety checks
 - Code is thoroughly commented for clarity
-
-## Time Spent
-Approximately [X] hours on implementation, [Y] hours on testing and documentation
