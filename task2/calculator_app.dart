@@ -209,7 +209,7 @@ void main() async {
   
   print('\n' + '=' * 50);
   print('All calculations complete!');
-
+}
 
   
 /* ===== CONCEPTUAL QUESTIONS (Task 2) ===== */
