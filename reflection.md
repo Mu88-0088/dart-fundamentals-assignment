@@ -1,11 +1,12 @@
 # Dart Fundamentals Assignment - Reflection
 
 Name:MUSAB ASHIK
+
 ID:ATE/0319/15
 
 ## QR1: Most Challenging Concept
 
-The most challenging concept for me was understanding asynchronous programming with Future, async, and await. Initially, I was confused about why we needed these concepts at all - why not just run code sequentially? 
+The most challenging concept for me was understanding asynchronous programming with Future, async, and await. Initially, I was confused about why we needed these concepts at all why not just run code sequentially? 
 
 The moment of clarity came when I experimented by removing the `await` keyword from one of the calculator calls. Instead of seeing the calculation result, I saw "Instance of Future<double>" printed. This helped me understand that async functions return immediately with a "promise" of a future value, not the actual value. The real-world analogy of ordering food at a restaurant helped: when you order (call async function), you get a receipt (Future) immediately, but you have to wait (await) for the actual food (result). The kitchen prepares your food while you do other things (non-blocking), and they call your number when it's ready (Future completes).
 
